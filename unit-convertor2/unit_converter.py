@@ -1,10 +1,10 @@
 import streamlit as st
 import requests
 
-#  page title and icon
-st.set_page_config(page_title="📏  Unit Converter", page_icon="📏", layout="centered")
+# Page title and icon
+st.set_page_config(page_title="📏 Unit Converter", page_icon="📏", layout="centered")
 
-# Custom CSS 
+# Custom CSS
 st.markdown("""
     <style>
     .stApp {
@@ -82,7 +82,7 @@ conversion_type = st.sidebar.selectbox(
     ["Length", "Weight", "Temperature", "Volume", "Area", "Speed", "Currency", "Time", "Energy"]
 )
 
-# convert length
+# Convert length
 def convert_length(value, from_unit, to_unit):
     conversions = {
         "Meters": 1,
@@ -93,7 +93,7 @@ def convert_length(value, from_unit, to_unit):
     }
     return value * (conversions[to_unit] / conversions[from_unit])
 
-#  convert weight
+# Convert weight
 def convert_weight(value, from_unit, to_unit):
     conversions = {
         "Kilograms": 1,
@@ -103,7 +103,7 @@ def convert_weight(value, from_unit, to_unit):
     }
     return value * (conversions[to_unit] / conversions[from_unit])
 
-# convert temperature
+# Convert temperature
 def convert_temperature(value, from_unit, to_unit):
     if from_unit == "Celsius" and to_unit == "Fahrenheit":
         return (value * 9/5) + 32
@@ -118,9 +118,9 @@ def convert_temperature(value, from_unit, to_unit):
     elif from_unit == "Kelvin" and to_unit == "Fahrenheit":
         return (value - 273.15) * 9/5 + 32
     else:
-        return value  
+        return value
 
-#  convert volume
+# Convert volume
 def convert_volume(value, from_unit, to_unit):
     conversions = {
         "Liters": 1,
@@ -130,7 +130,7 @@ def convert_volume(value, from_unit, to_unit):
     }
     return value * (conversions[to_unit] / conversions[from_unit])
 
-# convert area
+# Convert area
 def convert_area(value, from_unit, to_unit):
     conversions = {
         "Square Meters": 1,
@@ -140,7 +140,7 @@ def convert_area(value, from_unit, to_unit):
     }
     return value * (conversions[to_unit] / conversions[from_unit])
 
-# convert speed
+# Convert speed
 def convert_speed(value, from_unit, to_unit):
     conversions = {
         "Meters/Second": 1,
@@ -150,16 +150,16 @@ def convert_speed(value, from_unit, to_unit):
     }
     return value * (conversions[to_unit] / conversions[from_unit])
 
-# convert currency
+# Convert currency
 def convert_currency(value, from_unit, to_unit):
-    API_KEY = "YOUR_API_KEY" 
+    API_KEY = "YOUR_API_KEY"  # Replace with your API key
     url = f"https://api.exchangerate-api.com/v4/latest/{from_unit}"
     response = requests.get(url)
     data = response.json()
     rate = data["rates"][to_unit]
     return value * rate
 
-# convert time
+# Convert time
 def convert_time(value, from_unit, to_unit):
     conversions = {
         "Seconds": 1,
@@ -169,7 +169,7 @@ def convert_time(value, from_unit, to_unit):
     }
     return value * (conversions[to_unit] / conversions[from_unit])
 
-#  convert energy
+# Convert energy
 def convert_energy(value, from_unit, to_unit):
     conversions = {
         "Joules": 1,
@@ -253,7 +253,7 @@ elif conversion_type == "Speed":
 
 elif conversion_type == "Currency":
     st.header("💱 Currency Conversion")
-    currency_units = ["USD", "EUR", "GBP", "JPY", "INR"]  
+    currency_units = ["USD", "EUR", "GBP", "JPY", "INR"]
     col1, col2 = st.columns(2)
     with col1:
         from_unit = st.selectbox("From", currency_units, key="currency_from")
@@ -289,6 +289,10 @@ elif conversion_type == "Energy":
 
 # Reset button
 if st.button("🔄 Reset"):
+    # Clear session state
+    for key in st.session_state.keys():
+        del st.session_state[key]
+    # Rerun the app
     st.experimental_rerun()
 
 # Footer
