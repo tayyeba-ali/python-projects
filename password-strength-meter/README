@@ -1,4 +1,4 @@
-#🔐 Password Strength Checker
+**🔐 Password Strength Checker**
 A simple Password Strength Checker built with Streamlit and Python. This tool helps users evaluate their password security by checking length, uppercase/lowercase letters, numbers, and special characters.
 
 🚀 Features
