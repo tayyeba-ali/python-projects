@@ -1,0 +1,33 @@
+[
+  {
+    "title" : "Python Crash Course",
+    "author" : "Eric Matthes",
+    "publication_year" : 2019,
+    "genre":"Programming".
+    "read_status": false,
+    "added_data" : "2015-03-17 6:16"
+  }.
+  {  
+    "title" : "Rich Dad Poor Dad",
+    "author" : " Robert T. Kiyosaki",
+    "publication_year" : 1997,
+    "genre":"motivation".
+    "read_status": true,
+    "added_data" : "2015-03-17 6:20"
+  },
+  {    
+    "title" : "The Psychology of Money",
+    "author" : "Morgan Housel",
+    "publication_year" : 2020,
+    "genre":"motivation".
+    "read_status": true,
+    "added_data" : "2015-03-17 6:40"
+  },
+     "title" : "Atomic Habits",
+    "author" : "James Clear",
+    "publication_year" :2018,
+    "genre":"motivation".
+    "read_status": true,
+    "added_data" : "2015-03-17 6:50"
+  },
+]
