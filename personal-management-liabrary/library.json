@@ -1,13 +1,38 @@
 [
   {
-    "title" : "Python Crash Course",
-    "author" : "Eric Matthes",
-    "publication_year" : 2019,
+    "title":"pyhton crash course",
+    "author": "Eric Matthes",
+    "publication_year": 2019,
     "genre":"Programming",
     "read_status": false,
-    "added_data" : "2015-03-17 6:16"
+    "added_data": "2025-03-11 11:36:40"
   },
-  {  
+  {
+    "title":"Automate the boring stuff with python",
+    "author": "Fiza Sagar",
+    "publication_year": 2011,
+    "genre":"Programming",
+    "read_status": true,
+    "added_data": "2025-03-11 11:45:80"
+  },
+  {
+    "title":"Fluent Python",
+    "author": "Ramalho",
+    "publication_year": 2022,
+    "genre":"Programming",
+    "read_status": false,
+    "added_data": "2025-03-11 11:55:20"
+  },
+  {    
+    "title":"Effective Python",
+    "author": "Brett Slatkin",
+    "publication_year": 2020,
+    "genre":"Programming",
+    "read_status": true,
+    "added_data": "2025-03-11 11:58:10"
+    
+  },
+   {  
     "title" : "Rich Dad Poor Dad",
     "author" : " Robert T. Kiyosaki",
     "publication_year" : 1997,
@@ -22,25 +47,6 @@
     "genre":"motivation",
     "read_status": true,
     "added_data" : "2015-03-17 6:40"
-  },
-  {
-    "title" : "Atomic Habits",
-    "author" : "James Clear",
-    "publication_year" :2018,
-    "genre":"motivation",
-    "read_status": true,
-    "added_data" : "2015-03-17 6:40"
-  },
-    {    
-    "title":"Effective Python",
-    "author": "Brett Slatkin",
-    "publication_year": 2020,
-    "genre":"Programming",
-    "read_status": true,
-    "added_data": "2025-03-11 11:58:10"
-    
   }
-]
-    
-    
+]    
   
